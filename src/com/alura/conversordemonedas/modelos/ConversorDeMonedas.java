@@ -112,7 +112,7 @@ public class ConversorDeMonedas {
     }
 
     public String elegirOpcionMenu(){
-        System.out.println("\n-----" + "Elige una opcion del menu o escribe salir " + "---------\n");
+        System.out.println("\n---------" + "Elige una opcion del menu o escribe salir " + "-------------\n");
         setRespuestaUsuario(usuario.nextLine());
         return getRespuestaUsuario();
     }
@@ -171,7 +171,7 @@ public class ConversorDeMonedas {
                 break;
 
             case "salir":
-                System.out.println("Has salido del menu");
+                System.out.println("Has salido del programa");
                 setRespuestaUsuario(respuestaUsuario);
                 break;
         }
@@ -186,8 +186,9 @@ public class ConversorDeMonedas {
 
     @Override
     public String toString() {
-        return "---------------------  Resultado ----------------------- \n" +
-                "" + this.monedaBase + " " + nameMonedaBase + " = " +
+        return "-------------------------- Resultado --------------------------- \n" +
+                "\n" + nameMonedaBase + " a " + nameMonedaDestino +
+                "\n" + this.monedaBase + " " + nameMonedaBase + " = " +
                 convertidor() + " " + nameMonedaDestino + "\nfecha" + date;
     }
 }

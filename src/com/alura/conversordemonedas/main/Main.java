@@ -15,15 +15,17 @@ public class Main {
     public static void main(String[] args) throws IOException, InterruptedException {
 
         ConversorDeMonedas conversorDeMoneda = new ConversorDeMonedas();
-
-
         String claveAPIs = "a31e68ef630df1f5854f2888";
-
-
         conversorDeMoneda.printMenuConversor();
-        conversorDeMoneda.elegirOpcionMenu();
-        conversorDeMoneda.setMonedas(conversorDeMoneda.getRespuestaUsuario());
         while (true) {
+            conversorDeMoneda.elegirOpcionMenu();
+            if (conversorDeMoneda.getRespuestaUsuario().equalsIgnoreCase("salir")) {
+                System.out.println("Has salido del programa");
+                break;
+
+            }
+            conversorDeMoneda.setMonedas(conversorDeMoneda.getRespuestaUsuario());
+
             String dirrecionUrl = "https://v6.exchangerate-api.com/v6/"
                     + claveAPIs + "/pair/"
                     + conversorDeMoneda.getNameMonedaBase()
@@ -44,16 +46,9 @@ public class Main {
             System.out.println(conversorDeMoneda);
 
 
-            conversorDeMoneda.elegirOpcionMenu();
-            if (conversorDeMoneda.getRespuestaUsuario().equalsIgnoreCase("salir") ) {
-                break;
-
-            }else {
-
-                conversorDeMoneda.setMonedas(conversorDeMoneda.getRespuestaUsuario());}
+          //  conversorDeMoneda.elegirOpcionMenu();
 
 
         }
-
     }
 }
