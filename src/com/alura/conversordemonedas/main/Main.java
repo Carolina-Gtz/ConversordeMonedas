@@ -45,10 +45,6 @@ public class Main {
             conversorDeMoneda.setMonedaDest(conversorDeMonedasDTO);
             System.out.println(conversorDeMoneda);
 
-
-          //  conversorDeMoneda.elegirOpcionMenu();
-
-
         }
     }
 }
