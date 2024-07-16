@@ -101,15 +101,13 @@ public class ConversorDeMonedas {
     public void printMenuConversor() {
 
         System.out.println("\n-------------------- Option menu  ------------------------------\n");
-        System.out.println("Option  (1).  Convertir Dolar estadounidense USD a Peso Argentino ARS");
-        System.out.println("Option  (2).  Peso Argentino ARS > USD - Dolar estadounidense ");
-        System.out.println("Option  (3).  Dolar estadounidense USD => BRL - Real brasilero");
-        System.out.println("Option  (4).  Real brasilero BRL => USD - Dolar estadounidense ");
-        System.out.println("Option  (5).  Dolar estadounidense USD => COP - Peso colombiano");
-        System.out.println("Option  (6).  Peso colombiano COP  => Dolar estadounidense USD");
-        System.out.println("Option  (7).  Peso colombiano  COP a Dolar estadounidense  USD");
-        System.out.println("Option  (8).  Dolar estadounidense USD  => Peso colombiano COP");
-        System.out.println("Option  (9).  Otras Opciones de convecion de moneta");
+        System.out.println("Option  (1).  Convertir Dolar estadounidense USD => ARS Peso Argentino ");
+        System.out.println("Option  (2).  Peso Argentino ARS => USD  Dolar estadounidense ");
+        System.out.println("Option  (3).  Dolar estadounidense USD => BRL Real brasilero");
+        System.out.println("Option  (4).  Real brasilero BRL => USD Dolar estadounidense ");
+        System.out.println("Option  (5).  Dolar estadounidense USD => COP Peso colombiano");
+        System.out.println("Option  (6).  Peso colombiano COP  => USD Dolar estadounidense ");
+        System.out.println("Option  (7).  Otras Opciones de convecion de moneta");
 
     }
 
@@ -126,7 +124,7 @@ public class ConversorDeMonedas {
             // System.out.println("Elige una opcion del menu o escribe salir");
             case "1":
                 setNameMonedaBase("USD");
-                setNameMonedaDestino("COP");
+                setNameMonedaDestino("ARS");
                 setRespuestaUsuario(respuestaUsuario);
                 break;
 
@@ -162,20 +160,7 @@ public class ConversorDeMonedas {
                 break;
 
             case "7":
-                setNameMonedaBase("USD");
-                setNameMonedaDestino("COP");
-                setRespuestaUsuario(respuestaUsuario);
-                break;
-
-            case "8":
-                setNameMonedaBase("USD");
-                setNameMonedaDestino("COP");
-                setRespuestaUsuario(respuestaUsuario);
-                break;
-
-            case "9":
-
-                System.out.println("Escribe el nombre de la moneda base");
+                System.out.println("Escribe el nombre de la moneda Base");
                 String nameMonedaBase = usuario.nextLine();
 
                 System.out.println("Escribe el nombre de la moneda Destino");
