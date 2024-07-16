@@ -41,7 +41,7 @@ public class Main {
             ConversorDeMonedasDTO conversorDeMonedasDTO = gson.fromJson(json, ConversorDeMonedasDTO.class);
 
             conversorDeMoneda.setMonedaDest(conversorDeMonedasDTO);
-            System.out.println("Resultado:" + conversorDeMoneda);
+            System.out.println(conversorDeMoneda);
 
 
             conversorDeMoneda.elegirOpcionMenu();

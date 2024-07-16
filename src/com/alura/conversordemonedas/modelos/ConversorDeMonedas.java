@@ -201,7 +201,7 @@ public class ConversorDeMonedas {
 
     @Override
     public String toString() {
-        return "------------------  Resultado ------------------ \n" +
+        return "---------------------  Resultado ----------------------- \n" +
                 "" + this.monedaBase + " " + nameMonedaBase + " = " +
                 convertidor() + " " + nameMonedaDestino + "\nfecha" + date;
     }
